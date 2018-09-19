@@ -11,9 +11,9 @@
 |
 */
 //
-Route::get('/', function () {
-    return view('test');
-});
+//Route::get('/', function () {
+//    return view('test');
+//});
 
 
 
@@ -107,5 +107,10 @@ Route::group(['prefix' => 'books'], function () {
     Route::post('create', ['as' => 'book.create', 'uses' => 'bookController@store']);
     Route::get('all', ['as' => 'book.index', 'uses' => 'bookController@index']);
 
+});
+
+
+Route::get('/',function(){
+    return view('web.web_pages.index');
 });
 
